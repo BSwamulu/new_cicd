@@ -1,0 +1,103 @@
+<div class="row d-flex justify-content-around div1">
+
+    <div class="col-md-4">
+          <div ><h6 align='center'>Image Id</h6>
+            <h6 align='center'>{{data2}}</h6>
+          </div>
+      </div>
+      <div class="col-md-4">
+            <div ><h6 align='center'>Job Link</h6>
+              <h6 align='center'><a href='#'>Job Link</a></h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+              <div ><h6 align='center'>Execution Time</h6>
+                <h6 align='center'>#####</h6>
+            </div>
+          </div>
+</div>
+
+<!-- <app-dropdown></app-dropdown> -->
+<div class="div5">
+<div class='container' id='div5'>
+  <br/>
+  <ul>
+    <ng-container *ngFor="let value of data1">
+    <li >
+      <a [routerLink] ="['/private/image/', value.image_id ]"  (click)="CallHome(value.image_id)"><font color='black'>{{value.image_id}}</font></a>
+  </li>
+  </ng-container>
+  </ul>
+</div>
+</div>
+
+
+<div class="div2">
+<br/>
+      <h4>Summary:</h4>
+      <div class='row'>
+            <div class='col-md-3' id='div2'>
+              <div id='div7'><h4><font color='white'>{{data[1].total}}</font></h4></div>
+              <div id='div8'><h4><font color='white'>Suit's</font></h4></div>
+              <div id='div9'><mat-icon  class="icon-display" >brightness_low</mat-icon></div>
+            </div>
+      <div class='col-md-3' id='div3'>
+        <div id='div13'><h4><font color='white'>{{data[1].total_pass}}</font></h4></div>
+        <div id='div14'><h4><font color='white'>Pass</font></h4></div>
+        <div id='div15'><mat-icon  class="icon-display" >thumb_up_alt</mat-icon></div>
+      </div>
+      <div class='col-md-3' id='div4'>
+        <div id='div10'><h4><font color='white'>{{data[1].total_fail}}</font></h4></div>
+        <div id='div11'><h4><font color='white'>Fail</font></h4></div>
+        <div id='div12'><mat-icon  class="icon-display" >thumb_down_alt</mat-icon></div>
+      </div>
+      <div class='col-md-3' id='div6'>
+        <div id='div16'><h4><font color='white'>{{data[1].total}}</font></h4></div>
+        <div id='div17'><h4><font color='white'>Total</font></h4></div>
+        <div id='div18'><mat-icon  class="icon-display" >format_list_bulleted</mat-icon></div>
+      </div>
+
+</div>
+</div>
+
+<div class='div4'>
+<h4 >Test Suite Detailed Report:</h4>
+</div>
+
+
+
+<div class="div3">
+ <div class="row">
+     <div class="col-lg-12 col-sm-3">
+
+          <table class="table table-hover table-bordered">
+             <thead class="thead-dark">
+                 <tr>
+                   <th>Suit_Id</th>
+                   <th>Suit_Name</th>
+                   <th>Test_Id</th>
+                   <th>Test_Name</th>
+                   <th>Start_Time</th>
+                   <th>End_Time</th>
+                   <th>Status</th>
+                   </tr>
+               </thead>
+             <ng-container *ngFor="let value of data">
+
+                     <tbody>
+                     <tr >
+                       <td>{{value.suit_id}}</td>
+                       <td>{{value.suit_name}}</td>
+                       <td>{{value.test_id}}</td>
+                       <td>{{value.test_name}}</td>
+                       <td>{{value.starttime }}</td>
+                       <td>{{value.endtime }}</td>
+                       <td>{{value.status}}</td>
+                     </tr>
+                    </tbody>
+             </ng-container>
+
+         </table>
+     </div>
+ </div>
+</div>

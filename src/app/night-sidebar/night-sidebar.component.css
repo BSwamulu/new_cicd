@@ -1,0 +1,18 @@
+.div5{
+  position:fixed;
+  width:250px;
+  height:600px;
+  background:#4278f5;
+  left:0px;
+  top:50px;
+}
+
+#div5{
+  position:absolute;
+  overflow-y: auto;
+  width:249px;
+  height:599px;
+  background:#4278f5;
+  left:1px;
+  top:0px;
+}

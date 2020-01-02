@@ -1,0 +1,12 @@
+<div class="div5">
+<div class='container' id='div5'>
+  <br/>
+  <ul>
+    <ng-container *ngFor="let value of data1">
+    <li >
+      <a [routerLink] ="['/night/build1/', value.image_id ]"  (click)="CallHome(value.image_id)"><font color='black'>{{value.image_id}}</font></a>
+  </li>
+  </ng-container>
+  </ul>
+</div>
+</div>
